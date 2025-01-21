@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hội chợ xuân Alpha</title>
+    <link href='data:image/png;base64,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' rel='icon' type='image/x-icon' />
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/home-responsive.css">
+    <link rel="stylesheet" href="./assets/css/toast-message.css">
+    <link rel="stylesheet" href="./assets/font/font-awesome-pro-v6-6.2.0/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-left">
+                    <ul class="header-top-list">
+                        <li><a href=""><i class="fa-regular fa-phone"></i> 0123 456 789 (miễn phí)</a></li>
+                        <li><a href=""><i class="fa-light fa-location-dot"></i> Xem vị trí cửa hàng</a></li>
+                    </ul>
+                </div>
+                <div class="header-top-right">
+                    <ul class="header-top-list">
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="">Cửa hàng</a></li>
+                        <li><a href="">Chính sách</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="header-middle-left">
+                    <div class="header-logo">
+                        <a href="">
+                            <img src="data:image/png;base64,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" alt="" class="header-logo-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="header-middle-center">
+                    <form action="" class="form-search">
+                        <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-search-input" placeholder="Tìm kiếm món ăn..."
+                            oninput="searchProducts()">
+                        <button class="filter-btn"><i class="fa-light fa-filter-list"></i><span>Lọc</span></button>
+                    </form>
+                </div>
+                <div class="header-middle-right">
+                    <ul class="header-middle-right-list">
+                        <li class="header-middle-right-item dnone open" onclick="openSearchMb()">
+                            <div class="cart-icon-menu">
+                                <i class="fa-light fa-magnifying-glass"></i>
+                            </div>
+                        </li>
+                        <li class="header-middle-right-item close" onclick="closeSearchMb()">
+                            <div class="cart-icon-menu">
+                                <i class="fa-light fa-circle-xmark"></i>
+                            </div>
+                        </li>
+                        <li class="header-middle-right-item dropdown open">
+                            <i class="fa-light fa-user"></i>
+                            <div class="auth-container">
+                                <span class="text-dndk">Đăng nhập / Đăng ký</span>
+                                <span class="text-tk">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+                            </div>
+                            <ul class="header-middle-right-menu">
+                                <li><a id="login" href="javascript:;"><i class="fa-light fa-right-to-bracket"></i> Đăng nhập</a></li>
+                                <li><a id="signup" href="javascript:;"><i class="fa-light fa-user-plus"></i> Đăng ký</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-middle-right-item open" onclick="openCart()">
+                            <div class="cart-icon-menu">
+                                <i class="fa-light fa-basket-shopping"></i>
+                                <span class="count-product-cart">0</span>
+                            </div>
+                            <span>Giỏ hàng</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="header-bottom">
+        <div class="container">
+            <ul class="menu-list">
+                <li class="menu-list-item"><a href="" class="menu-link">Trang chủ</a></li>
+                <li class="menu-list-item" onclick="showCategory('Món chay')"><a href="javascript:;" class="menu-link">Món chay</a></li>
+                <li class="menu-list-item" onclick="showCategory('Món mặn')"><a href="javascript:;" class="menu-link">Món mặn</a></li>
+                <li class="menu-list-item" onclick="showCategory('Món lẩu')"><a href="javascript:;" class="menu-link">Món lẩu</a></li>
+                <li class="menu-list-item" onclick="showCategory('Món ăn vặt')"><a href="javascript:;" class="menu-link">Món ăn vặt</a></li>
+                <li class="menu-list-item" onclick="showCategory('Món tráng miệng')"><a href="javascript:;" class="menu-link">Món tráng miệng</a></li>
+                <li class="menu-list-item" onclick="showCategory('Nước uống')"><a href="javascript:;" class="menu-link">Nước uống</a></li>
+                <li class="menu-list-item" onclick="showCategory('Món khác')"><a href="javascript:;" class="menu-link">Món khác</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="advanced-search">
+        <div class="container">
+            <div class="advanced-search-category">
+                <span>Phân loại </span>
+                <select name="" id="advanced-search-category-select" onchange="searchProducts()">
+                    <option>Tất cả</option>
+                    <option>Món chay</option>
+                    <option>Món mặn</option>
+                    <option>Món lẩu</option>
+                    <option>Món ăn vặt</option>
+                    <option>Món tráng miệng</option>
+                    <option>Nước uống</option>
+                </select>
+            </div>
+            <div class="advanced-search-price">
+                <span>Giá từ</span>
+                <input type="number" placeholder="tối thiểu" id="min-price" onchange="searchProducts()">
+                <span>đến</span>
+                <input type="number" placeholder="tối đa" id="max-price" onchange="searchProducts()">
+                <button id="advanced-search-price-btn"><i class="fa-light fa-magnifying-glass-dollar"></i></button>
+            </div>
+            <div class="advanced-search-control">
+                <button id="sort-ascending" onclick="searchProducts(1)"><i class="fa-regular fa-arrow-up-short-wide"></i></button>
+                <button id="sort-descending" onclick="searchProducts(2)"><i class="fa-regular fa-arrow-down-wide-short"></i></button>
+                <button id="reset-search" onclick="searchProducts(0)"><i class="fa-light fa-arrow-rotate-right"></i></button>
+                <button onclick="closeSearchAdvanced()"><i class="fa-light fa-xmark"></i></button>
+            </div>
+        </div>
+    </div>
+    <main class="main-wrapper">
+        <div class="container" id="trangchu">
+            <div class="home-slider">
+                <img src="https://img.giaoduc.net.vn/w1000/Uploaded/2025/bpcgtqvp/2020_01_17/anpha2.jpg" alt="">
+                <!-- <img src="https://alphaschool.edu.vn//upload/photos/shares/CGD/l%C3%AC%20x%C3%AC.jpg" alt="">
+                <img src="./assets/img/banner-3.png" alt="">
+                <img src="./assets/img/banner-4.png" alt="">
+                <img src="./assets/img/banner-5.png" alt=""> -->
+            </div>
+            <div class="home-service" id="home-service">
+                <div class="home-service-item">
+                    <div class="home-service-item-icon">
+                        <i class="fa-light fa-person-carry-box"></i>
+                    </div>
+                    <div class="home-service-item-content">
+                        <h4 class="home-service-item-content-h">GIAO HÀNG NHANH</h4>
+                        <p class="home-service-item-content-desc">Cho tất cả đơn hàng</p>
+                    </div>
+                </div>
+                <div class="home-service-item">
+                    <div class="home-service-item-icon">
+                        <i class="fa-light fa-shield-heart"></i>
+                    </div>
+                    <div class="home-service-item-content">
+                        <h4 class="home-service-item-content-h">SẢN PHẨM AN TOÀN</h4>
+                        <p class="home-service-item-content-desc">Cam kết chất lượng</p>
+                    </div>
+                </div>
+                <div class="home-service-item">
+                    <div class="home-service-item-icon">
+                        <i class="fa-light fa-headset"></i>
+                    </div>
+                    <div class="home-service-item-content">
+                        <h4 class="home-service-item-content-h">HỖ TRỢ 24/7</h4>
+                        <p class="home-service-item-content-desc">Tất cả ngày trong tuần</p>
+                    </div>
+                </div>
+                <div class="home-service-item">
+                    <div class="home-service-item-icon">
+                        <i class="fa-light fa-circle-dollar"></i>
+                    </div>
+                    <div class="home-service-item-content">
+                        <h4 class="home-service-item-content-h">HOÀN LẠI TIỀN</h4>
+                        <p class="home-service-item-content-desc">Nếu không hài lòng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="home-title-block" id="home-title">
+                <h2 class="home-title">Khám phá thực đơn của chúng tôi</h2>
+            </div>
+            <div class="home-products" id="home-products">
+            </div>
+            <div class="page-nav">
+                <ul class="page-nav-list">
+                </ul>
+            </div>
+        </div>
+        <div class="container" id="account-user">
+            <div class="main-account">
+                <div class="main-account-header">
+                    <h3>Thông tin tài khoản của bạn</h3>
+                    <p>Quản lý thông tin để bảo mật tài khoản</p>
+                </div>
+                <div class="main-account-body">
+                    <div class="main-account-body-col">
+                        <form action="" class="info-user">
+                            <div class="form-group">
+                                <label for="infoname" class="form-label">Họ và tên</label>
+                                <input class="form-control" type="text" name="infoname" id="infoname" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="infophone" class="form-label">Số điện thoại</label>
+                                <input class="form-control" type="text" name="infophone" id="infophone" disabled="true"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="infoemail" class="form-label">Email</label>
+                                <input class="form-control" type="email" name="infoemail" id="infoemail"
+                                    placeholder="Thêm địa chỉ email của bạn">
+                                <span class="inforemail-error form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="infoaddress" class="form-label">Địa chỉ</label>
+                                <input class="form-control" type="text" name="infoaddress" id="infoaddress"
+                                    placeholder="Thêm địa chỉ giao hàng của bạn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="main-account-body-col">
+                        <form action="" class="change-password">
+                            <div class="form-group">
+                                <label for="" class="form-label w60">Mật khẩu hiện tại</label>
+                                <input class="form-control" type="password" name="" id="password-cur-info"
+                                    placeholder="Nhập mật khẩu hiện tại">
+                                <span class="password-cur-info-error form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label w60">Mật khẩu mới </label>
+                                <input class="form-control" type="password" name="" id="password-after-info"
+                                    placeholder="Nhập mật khẩu mới">
+                                <span class="password-after-info-error form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label w60">Xác nhận mật khẩu mới</label>
+                                <input class="form-control" type="password" name="" id="password-comfirm-info"
+                                    placeholder="Nhập lại mật khẩu mới">
+                                <span class="password-after-comfirm-error form-message"></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="main-account-body-row">
+                        <div>
+                            <button id="save-info-user" onclick="changeInformation()"><i
+                                    class="fa-regular fa-floppy-disk"></i> Lưu thay đổi</button>
+                        </div>
+                        <div>
+                            <button id="save-password" onclick="changePassword()"><i class="fa-regular fa-key"></i> Đổi
+                                mật khẩu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="order-history">
+            <div class="main-account">
+                <div class="main-account-header">
+                    <h3>Quản lý đơn hàng của bạn</h3>
+                    <p>Xem chi tiết, trạng thái của những đơn hàng đã đặt.</p>
+                </div>
+                <div class="main-account-body">
+                    <div class="order-history-section">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal product-detail">
+        <button class="modal-close close-popup"><i class="fa-thin fa-xmark"></i></button>
+        <div class="modal-container mdl-cnt" id="product-detail-content">
+        </div>
+    </div>
+    <div class="modal signup-login">
+        <div class="modal-container">
+            <button class="form-close" onclick="closeModal()"><i class="fa-regular fa-xmark"></i></button>
+            <div class="forms mdl-cnt">
+                <div class="form-content sign-up">
+                    <h3 class="form-title">
+                        Đăng ký tài khoản
+                    </h3>
+                    <p class="form-description">Đăng ký thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng
+                        tôi </p>
+                    <form action="" class="signup-form">
+                        <div class="form-group">
+                            <label for="fullname" class="form-label">Tên đầy đủ</label>
+                            <input id="fullname" name="fullname" type="text" placeholder="VD: Nhật Sinh"
+                                class="form-control">
+                            <span class="form-message-name form-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Số điện thoại</label>
+                            <input id="phone" name="phone" type="text" placeholder="Nhập số điện thoại"
+                                class="form-control">
+                            <span class="form-message-phone form-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input id="password" name="password" type="password" placeholder="Nhập mật khẩu"
+                                class="form-control">
+                            <span class="form-message-password form-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+                            <input id="password_confirmation" name="password_confirmation"
+                                placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+                            <span class="form-message-password-confi form-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <input class="checkbox" name="checkbox" required="" type="checkbox" id="checkbox-signup">
+                            <label for="checkbox-signup" class="form-checkbox">Tôi đồng ý với <a href="#"
+                                    title="chính sách trang web" target="_blank">chính sách trang web</a></label>
+                            <p class="form-message-checkbox form-message"></p>
+                        </div>
+                        <button class="form-submit" id="signup-button">Đăng ký</button>
+                    </form>
+                    <p class="change-login">Bạn đã có tài khoản ? <a href="javascript:;" class="login-link">Đăng nhập
+                            ngay</a></p>
+                </div>
+                <div class="form-content login">
+                    <h3 class="form-title">Đăng nhập tài khoản</h3>
+                    <p class="form-description">Đăng nhập thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng
+                        tôi</p>
+                    <form action="" class="login-form">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Số điện thoại</label>
+                            <input id="phone-login" name="phone" type="text" placeholder="Nhập số điện thoại"
+                                class="form-control">
+                            <span class="form-message phonelog"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input id="password-login" name="password" type="password" placeholder="Nhập mật khẩu"
+                                class="form-control">
+                            <span class="form-message-check-login form-message"></span>
+                        </div>
+                        <button class="form-submit" id="login-button">Đăng nhập</button>
+                    </form>
+                    <p class="change-login">Bạn chưa có tài khoản ? <a href="javascript:;" class="signup-link">Đăng kí
+                            ngay</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-cart">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h3 class="cart-header-title"><i class="fa-regular fa-basket-shopping-simple"></i> Giỏ hàng</h3>
+                <button class="cart-close" onclick="closeCart()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="cart-body">
+                <div class="gio-hang-trong">
+                    <i class="fa-thin fa-cart-xmark"></i>
+                    <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
+                </div>
+                <ul class="cart-list">
+                </ul>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total-price">
+                    <p class="text-tt">Tổng tiền:</p>
+                    <p class="text-price">0đ</p>
+                </div>
+                <div class="cart-footer-payment">
+                    <button class="them-mon"><i class="fa-regular fa-plus"></i> Thêm món</button>
+                    <button class="thanh-toan disabled">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal detail-order">
+        <div class="modal-container mdl-cnt">
+            <h3 class="modal-container-title">Thông tin đơn hàng</h3>
+            <button class="form-close" onclick="closeModal()"><i class="fa-regular fa-xmark"></i></button>
+            <div class="detail-order-content">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-top-content">
+                    <div class="footer-top-img">
+                        <img src="data:image/png;base64,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" alt="" class="header-logo-img" alt="">
+                    </div>
+                    <div class="footer-top-subbox">
+                        <div class="footer-top-subs">
+                            <h2 class="footer-top-subs-title">Đăng ký nhận tin</h2>
+                            <p class="footer-top-subs-text">Nhận thông tin mới nhất từ chúng tôi</p>
+                        </div>
+                        <form class="form-ground">
+                            <input type="email" class="form-ground-input" placeholder="Nhập email của bạn">
+                            <button class="form-ground-btn">
+                                <span>ĐĂNG KÝ</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget-area">
+            <div class="container">
+                <div class="widget-row">
+                    <div class="widget-row-col-1">
+                        <h3 class="widget-title">Về chúng tôi</h3>
+                        <div class="widget-row-col-content">
+                            <p>Ngày hội Xuân tại trường Alpha là dịp để mọi người hòa mình vào không khí Tết rộn ràng. 
+                                Những gian hàng đồ ăn, đồ uống phong phú, hấp dẫn mang đến trải nghiệm thú vị. 
+                                Từ món ăn truyền thống đến đồ uống mát lạnh, tất cả đều tạo nên một không gian ấm cúng và vui tươi.Ngày hội Xuân tại trường Alpha là dịp để mọi người hòa mình vào không khí Tết rộn ràng. Những gian hàng đồ ăn, đồ uống phong phú, hấp dẫn mang đến trải nghiệm thú vị. 
+                                Từ món ăn truyền thống đến đồ uống mát lạnh, tất cả đều tạo nên một không gian ấm cúng và vui tươi.</p>
+                        </div>
+                        <div class="widget-social">
+                            <div class="widget-social-item">
+                                <a href="https://www.facebook.com/alphaschool.edu.vn/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
+                    
+                                </a>
+                            </div>
+                            <div class="widget-social-item">
+                                <a href="">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                            <div class="widget-social-item">
+                                <a href="">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                            <div class="widget-social-item">
+                                <a href="">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-row-col">
+                        <h3 class="widget-title">Liên kết</h3>
+                        <ul class="widget-contact">
+                            <li class="widget-contact-item">
+                                <a href="">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <span>Về chúng tôi</span>
+                                </a>
+                            </li>
+                            <li class="widget-contact-item">
+                                <a href="">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <span>Thực đơn</span>
+                                </a>
+                            </li>
+                            <li class="widget-contact-item">
+                                <a href="">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <span>Điều khoản</span>
+                                </a>
+                            </li>
+                            <li class="widget-contact-item">
+                                <a href="">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <span>Liên hệ</span>
+                                </a>
+                            </li>
+                            <li class="widget-contact-item">
+                                <a href="">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <span>Tin tức</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-row-col">
+                        <h3 class="widget-title">Thực đơn</h3>
+                        <ul class="widget-contact">
+                            <li class="widget-contact-item">
+                                <a href="">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <span>Điểm tâm</span>
+                                </a>
+                            </li>
+                            <li class="widget-contact-item">
+                                <a href="">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <span>Món chay</span>
+                                </a>
+                            </li>
+                            <li class="widget-contact-item">
+                                <a href="">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <span>Món mặn</span>
+                                </a>
+                            </li>
+                            <li class="widget-contact-item">
+                                <a href="">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <span>Nước uống</span>
+                                </a>
+                            </li>
+                            <li class="widget-contact-item">
+                                <a href="">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <span>Tráng miệng</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-row-col-1">
+                        <h3 class="widget-title">Liên hệ</h3>
+                        <div class="contact">
+                            <div class="contact-item">
+                                <div class="contact-item-icon">
+                                    <i class="fa-regular fa-location-dot"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <span> Lô A26, Khu đô thị Geleximco , đường, Đ. Lê Trọng Tấn, Nam An Khánh, Hoài Đức, Hà Nội</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-item-icon">
+                                    <i class="fa-regular fa-phone"></i>
+                                </div>
+                                <div class="contact-content contact-item-phone">
+                                    <span>1900 7330</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-item-icon">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div class="contact-content conatct-item-email">
+                                    <span>lienhe@alphaschool.edu.vn</span><br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright-wrap">
+        <div class="container">
+            <div class="copyright-content">
+                <p>Copyright 2025 Ngô Minh Đức. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <div class="back-to-top">
+        <a href="#"><i class="fa-regular fa-arrow-up"></i></a>
+    </div>
+    <div class="checkout-page">
+        <div class="checkout-header">
+            <div class="checkout-return">
+                <button onclick="closecheckout()"><i class="fa-regular fa-chevron-left"></i></button>
+            </div>
+            <h2 class="checkout-title">Thanh toán</h2>
+        </div>
+        <main class="checkout-section container">
+            <div class="checkout-col-left">
+                <div class="checkout-row">
+                    <div class="checkout-col-title">
+                        Thông tin đơn hàng
+                    </div>
+                    <div class="checkout-col-content">
+                        <div class="content-group">
+                            <p class="checkout-content-label">Hình thức giao nhận</p>
+                            <div class="checkout-type-order">
+                                <button class="type-order-btn active" id="giaotannoi">
+                                    <i class="fa-duotone fa-moped"
+                                        style="--fa-secondary-opacity: 1.0; --fa-primary-color: dodgerblue; --fa-secondary-color: #ffb100;"></i>
+                                    Giao tận nơi
+                                </button>
+                                <button class="type-order-btn" id="tudenlay">
+                                    <i class="fa-duotone fa-box-heart"
+                                        style="--fa-secondary-opacity: 1.0; --fa-primary-color: pink; --fa-secondary-color: palevioletred;"></i>
+                                    Tự đến lấy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="content-group">
+                            <p class="checkout-content-label">Ngày giao hàng</p>
+                            <div class="date-order">
+                            </div>
+                        </div>
+                        <div class="content-group chk-ship" id="giaotannoi-group">
+                            <p class="checkout-content-label">Thời gian giao hàng</p>
+                            <div class="delivery-time">
+                                <input type="radio" name="giaongay" id="giaongay" class="radio">
+                                <label for="giaongay">Giao ngay khi xong</label>
+                            </div>
+                            <div class="delivery-time">
+                                <input type="radio" name="giaongay" id="deliverytime" class="radio">
+                                <label for="deliverytime">Giao vào giờ</label>
+                                <select class="choise-time">
+                                    <option data-hours="08" value="08:00" selected="selected">08:00 - 09:00</option>
+
+                                    <option data-hours="09" value="09:00">09:00 - 10:00</option>
+
+                                    <option data-hours="10" value="10:00"> 10:00 - 11:00</option>
+
+                                    <option data-hours="11" value="11:00"> 11:00 - 12:00</option>
+
+                                    <option data-hours="12" value="12:00"> 12:00 - 13:00</option>
+
+                                    <option data-hours="13" value="13:00"> 13:00 - 14:00</option>
+
+                                    <option data-hours="14" value="14:00"> 14:00 - 15:00</option>
+
+                                    <option data-hours="15" value="15:00"> 15:00 - 16:00</option>
+
+                                    <option data-hours="16" value="16:00"> 16:00 - 17:00</option>
+
+                                    <option data-hours="17" value="17:00"> 17:00 - 18:00</option>
+
+                                    <option data-hours="18" value="18:00"> 18:00 - 19:00</option>
+
+                                    <option data-hours="19" value="19:00"> 19:00 - 20:00</option>
+
+                                    <option data-hours="20" value="20:00"> 20:00 - 21:00</option>
+
+                                    <option data-hours="21" value="21:00"> 21:00 - 22:00</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="content-group" id="tudenlay-group">
+                            <p class="checkout-content-label">Lấy hàng tại chi nhánh</p>
+                            <div class="delivery-time">
+                                <input type="radio" name="chinhanh" id="chinhanh-1" class="radio">
+                                <label for="chinhanh-1">273 An Dương Vương, Phường 3, Quận 5</label>
+                            </div>
+                            <div class="delivery-time">
+                                <input type="radio" name="chinhanh" id="chinhanh-2" class="radio">
+                                <label for="chinhanh-2">04 Tôn Đức Thắng, Phường Bến Nghé, Quận 1</label>
+                            </div>
+                        </div>
+                        <div class="content-group">
+                            <p class="checkout-content-label">Ghi chú đơn hàng</p>
+                            <textarea type="text" class="note-order" placeholder="Nhập ghi chú"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-row">
+                    <div class="checkout-col-title">
+                        Thông tin người nhận
+                    </div>
+                    <div class="checkout-col-content">
+                        <div class="content-group">
+                            <form action="" class="info-nhan-hang">
+                                <div class="form-group">
+                                    <input id="tennguoinhan" name="tennguoinhan" type="text"
+                                        placeholder="Tên người nhận" class="form-control">
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input id="sdtnhan" name="sdtnhan" type="text" placeholder="Số điện thoại nhận hàng"
+                                        class="form-control">
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input id="diachinhan" name="diachinhan" type="text" placeholder="Địa chỉ nhận hàng"
+                                        class="form-control chk-ship">
+                                    <span class="form-message"></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout-col-right">
+                <p class="checkout-content-label">Đơn hàng</p>
+                <div class="bill-total" id="list-order-checkout">
+                </div>
+                <div class="bill-payment">
+                    <div class="total-bill-order">
+                    </div>
+                    <div class="policy-note">
+                        Bằng việc bấm vào nút “Đặt hàng”, tôi đồng ý với
+                        <a href="#" target="_blank">chính sách hoạt động</a>
+                        của chúng tôi.
+                    </div>
+                </div>
+                <div class="total-checkout">
+                    <div class="text">Tổng tiền</div>
+                    <div class="price-bill">
+                        <div class="price-final" id="checkout-cart-price-final">0</div>
+                    </div>
+                </div>
+                <button class="complete-checkout-btn">Đặt hàng</button>
+            </div>
+        </main>
+    </div>
+    <div id="toast"></div>
+    <script src="./js/initialization.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/checkout.js"></script>
+    <script src="./js/toast-message.js"></script>
+</body>
+</html>
